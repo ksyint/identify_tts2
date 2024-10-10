@@ -54,7 +54,7 @@ def inference(h):
         for i, filename in enumerate(filelist):
 
         
-            mel = np.load(os.path.join(h.test_input_wavs_dir, filename))
+            mel = np.load(os.path.join(h.test_input_mels_dir, filename))
             x = torch.FloatTensor(mel).to(device)
             x=x.unsqueeze(0)
             x=x.transpose(1,2)
